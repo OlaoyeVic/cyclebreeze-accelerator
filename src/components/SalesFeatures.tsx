@@ -12,11 +12,11 @@ const features = [
 
 const SalesFeatures = () => {
   return (
-    <section className="py-16 px-40 bg-white text-center">
-      <div className="w-full bg-gradient-to-r from-[#F0F9EC] via-[#F0F9EC] via-[74%] to-transparent shadow-lg rounded-xl p-8 text-center">
+    <section className="py-16 sm:px-40 bg-white text-center">
+      <div className="w-full bg-gradient-to-r from-[#F0F9EC] via-[#F0F9EC] via-[74%] to-transparent sm:shadow-lg sm:rounded-xl p-8 text-center">
         <h3 className="text-[#6FC446] uppercase text-sm font-semibold mb-2">Our Features</h3>
         <h2 className="text-[#1E1E24] text-4xl font-normal mb-8">What You Get with the 10X Sales System</h2>
-        <div className="grid md:grid-cols-4 gap-6 h-[313px] max-w-5xl mx-auto px-6 mt-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:h-[313px] max-w-5xl mx-auto px-6 mt-16">
           {features.slice(0, 4).map((feature, index) => (
             <div
               key={index}
@@ -27,7 +27,7 @@ const SalesFeatures = () => {
             </div>
           ))}
         </div>
-        <div className="grid md:grid-cols-3 gap-6 h-[313px] max-w-5xl mx-auto px-6 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:h-[313px] max-w-5xl mx-auto px-6 mt-6">
           {features.slice(4).map((feature, index) => (
             <div
               key={index}

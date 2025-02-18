@@ -2,8 +2,8 @@ import hero from '../assets/hero.svg';
 
 const Hero = () => {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center bg-white p-40">
-      <div className="flex items-center justify-between w-full bg-gradient-to-r from-[#F0F9EC] via-[#F0F9EC] via-[74%] to-transparent shadow-lg rounded-xl p-8 text-center">
+    <section className="w-full h-full md:min-h-screen flex items-center justify-center bg-white md:p-40 mt-16 sm:mt-0">
+      <div className="flex flex-col sm:flex-row items-center justify-between w-full bg-gradient-to-r from-[#F0F9EC] via-[#F0F9EC] via-[74%] to-transparent md:shadow-lg md:rounded-xl p-8 text-center">
         <div className="">
           {/* Heading */}
           <h1 className="text-left text-[55px] font-bold text-gray-900 leading-tight">

@@ -18,17 +18,17 @@ const FeatureCard = ({ title, description, image, index }: FeatureCardProps) => 
         index % 2 === 0 ? "justify-start" : "justify-end"
       } ${index % 2 === 0 ? "-mt-16" : "mt-16"} w-full`} // Overlapping effect
     >
-      <div className={`flex items-center gap-6 ${index % 2 === 0 ? "bg-[#F0F9EC]" : "bg-[#000000]"} shadow-lg rounded-xl overflow-hidden max-w-lg`}>
+      <div className={`flex items-center gap-3 sm:gap-6 ${index % 2 === 0 ? "bg-[#F0F9EC]" : "bg-[#000000]"} shadow-lg rounded-xl overflow-hidden max-w-lg`}>
         {/* Text Section */}
         <div className="p-6">
           <h3 className="text-[#6FC446] text-base font-semibold">WHY US</h3>
-          <h2 className={`text-3xl font-normal ${index % 2 === 0 ? "text-[#000000]" : "text-[#FFFFFF]"}`}>{title}</h2>
-          <p className={`mt-3 font-normal text-base ${index % 2 === 0 ? "text-[#676767]" : "text-[#FFFFFF]"}`}>{description}</p>
+          <h2 className={`sm:text-3xl text-xl font-normal ${index % 2 === 0 ? "text-[#000000]" : "text-[#FFFFFF]"}`}>{title}</h2>
+          <p className={`mt-3 font-normal text-xs sm:text-base ${index % 2 === 0 ? "text-[#676767]" : "text-[#FFFFFF]"}`}>{description}</p>
         </div>
 
         {/* Image Section */}
         <div className="h-full w-1/2">
-          <img src={image} alt={title} className="w-[147px] h-full" />
+          <img src={image} alt={title} className="sm:w-[147px] w-full h-full" />
         </div>
       </div>
     </motion.div>
