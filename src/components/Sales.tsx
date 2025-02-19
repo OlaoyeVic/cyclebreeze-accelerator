@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import sales1 from "../assets/sales1.svg";
 import sales2 from "../assets/sales2.svg";
+import { useNavigate } from "react-router-dom";
 
 const SalesSection = () => {
+  const navigate = useNavigate();
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
@@ -66,7 +68,10 @@ const SalesSection = () => {
               Apply for our exclusive 10X Sales Accelerator Program and stand a chance to
               win a complete sales system setup for your business.
             </p>
-            <button className="h-[71px] mt-4 bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] text-[#313134] font-normal text-xs px-4 py-2 rounded-[34px] hover:bg-green-700">
+            <button 
+              className="h-[71px] mt-4 bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] text-[#313134] font-normal text-xs px-4 py-2 rounded-[34px] hover:bg-green-700"
+              onClick={() => navigate("/accelerator-application")}
+            >
               Apply for the Accelerator Program
             </button>
           </div>
