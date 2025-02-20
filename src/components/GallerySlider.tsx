@@ -50,7 +50,7 @@ const ImageSlider: React.FC = () => {
   };
 
   return (
-    <section className="relative h-[500px] w-full overflow-hidden">
+    <section className="relative h-[989px] w-full overflow-hidden">
       <AnimatePresence initial={false} custom={currentIndex}>
         <motion.div
           key={currentIndex}

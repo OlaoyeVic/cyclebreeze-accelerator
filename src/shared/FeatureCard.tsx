@@ -16,7 +16,7 @@ const FeatureCard = ({ title, description, image, index }: FeatureCardProps) => 
       viewport={{ once: true }}
       className={`relative flex ${
         index % 2 === 0 ? "justify-start" : "justify-end"
-      } ${index % 2 === 0 ? "-mt-16" : "mt-16"} w-full`} // Overlapping effect
+      } ${index > 0 ? "mt-8 sm:mt-16" : ""} w-full`} // Overlapping effect
     >
       <div className={`flex items-center gap-3 sm:gap-6 ${index % 2 === 0 ? "bg-[#F0F9EC]" : "bg-[#000000]"} shadow-lg rounded-xl overflow-hidden max-w-lg`}>
         {/* Text Section */}
@@ -28,7 +28,7 @@ const FeatureCard = ({ title, description, image, index }: FeatureCardProps) => 
 
         {/* Image Section */}
         <div className="h-full w-1/2">
-          <img src={image} alt={title} className="sm:w-[147px] w-full h-full" />
+          <img src={image} alt={title} className="sm:w-[147px] w-full h-full object-cover" />
         </div>
       </div>
     </motion.div>

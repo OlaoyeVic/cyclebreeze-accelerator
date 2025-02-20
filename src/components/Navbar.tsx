@@ -34,6 +34,11 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
+            <div className="mr-2 space-x-4">
+              <a href="#" className="bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] text-[#313134] font-normal text-xs px-4 py-2 rounded-[34px] hover:bg-green-700">
+                Contact Us
+              </a>
+            </div>
             <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700">
               ☰
             </button>
@@ -48,9 +53,9 @@ const Navbar = () => {
             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-green-50">Pricing</a>
             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-green-50">Sales</a>
             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-green-50">Features</a>
-            <a href="#" className="block px-4 py-2 bg-green-600 text-white text-center rounded-md hover:bg-green-700">
+            {/* <a href="#" className="block px-4 py-2 bg-green-600 text-white text-center rounded-md hover:bg-green-700">
               Contact Us
-            </a>
+            </a> */}
           </div>
         )}
       </div>
