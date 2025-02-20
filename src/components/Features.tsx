@@ -33,7 +33,7 @@ const features = [
 const Features = () => {
   return (
     <section className="sm:p-40 p-10 relative flex flex-col items-center gap-16">
-      <h2 className="text-[#000000] text-4xl font-semibold mb-16">Why Choose the 10X Sales Accelerator?</h2>
+      <h2 className="text-[#000000] text-4xl font-semibold mb-4">Why Choose the 10X Sales Accelerator?</h2>
       {features.map((feature, index) => (
         <FeatureCard key={index} index={index} {...feature} />
       ))}

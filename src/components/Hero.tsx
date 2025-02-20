@@ -2,7 +2,7 @@ import hero from '../assets/hero.svg';
 
 const Hero = () => {
   return (
-    <section className="w-full h-full md:min-h-screen flex items-center justify-center bg-white md:px-40 pt-20 mt-16 sm:mt-0">
+    <section className="w-full h-full md:min-h-screen flex items-center justify-center bg-white md:px-40 sm:pt-20 pt-5 mt-16 sm:mt-0">
       <div className="flex flex-col sm:flex-row items-center justify-between w-full bg-gradient-to-r from-[#F0F9EC] via-[#F0F9EC] via-[74%] to-transparent md:shadow-lg md:rounded-xl p-8 text-center">
         <div className="">
           {/* Heading */}
