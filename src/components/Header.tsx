@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   const isActive = (route: string) => location.pathname === route;
 
   return (
-    <header className="py-5 fixed left-0 top-0 w-full z-50 bg-gradient-to-b from-transparent via-white to-transparent shadow-lg backdrop-blur-sm">
+    <header className="py-5 px-4 sm:px-6 lg:px-8 fixed left-0 top-0 w-full z-50 bg-gradient-to-b from-transparent via-white to-transparent shadow-lg backdrop-blur-sm">
       <div className="flex justify-between items-center px-4">
         {/* Logo */}
         <Link to="/">

@@ -1,12 +1,12 @@
 import ApplicationForm from "./components/ApplicationForm";
 import Footer from "./components/Footer";
 import GallerySlider from "./components/GallerySlider";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
 const AcceleratorApplication = () => {
   return (
     <div className="bg-white">
-      <Navbar />
+      <Header />
       <div className="bg-white sm:px-20 px-6 overflow-x-hidden">
         <GallerySlider />
         <ApplicationForm />
