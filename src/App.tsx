@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 import SalesFeatures from "./components/SalesFeatures";
@@ -7,11 +7,13 @@ import Pricing from "./components/Pricing";
 import Rewards from "./components/Rewards";
 import Sales from "./components/Sales";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="bg-white overflow-x-hidden">
-      <Navbar />
+      {/* <Navbar /> */}
+      <Header />
       <Hero />
       <Features />
       <SalesFeatures />
