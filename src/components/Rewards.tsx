@@ -2,6 +2,8 @@ import finalist1 from "../assets/finalist1.svg";
 import finalist2 from "../assets/finalist2.svg";
 import finalist3 from "../assets/finalist3.svg";
 import fileIcon from "../assets/file.svg";
+import { useState } from "react";
+import DownloadModal from "./DownloadModal";
 
 const rewards = [
   {prize: finalist1, reward: "1 Finalist = Scale Sales Package"},
@@ -10,6 +12,11 @@ const rewards = [
 ]
 
 const Rewards = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <section className="bg-white py-16 px-2 text-center">
       <h2 className="text-3xl font-bold mb-8">Rewards</h2>
@@ -54,10 +61,18 @@ const Rewards = () => {
             </div>
           </div>
           <div>
-            <button className="bg-[#6FC446] text-white sm:p-2 p-1 text-sm">Download File</button>
+            <button 
+              className="bg-[#6FC446] text-white sm:p-2 p-1 text-sm"
+              onClick={openModal}
+            >
+              Download File
+            </button>
           </div>
         </div>
       </div>
+      {isModalOpen && (
+        <DownloadModal closeModal={closeModal} />
+      )}
     </section>
   );
 }

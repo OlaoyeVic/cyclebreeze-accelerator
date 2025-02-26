@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import features1 from "../assets/features1.svg";
 import features2 from "../assets/features2.svg";
 import features3 from "../assets/features3.svg";
@@ -17,6 +18,8 @@ const features = [
 ];
 
 const SalesFeatures = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="py-16 sm:px-40 bg-white text-center">
       <div className="w-full bg-gradient-to-r from-[#F0F9EC] via-[#F0F9EC] via-[74%] to-transparent sm:shadow-lg sm:rounded-xl p-8 text-center">
@@ -48,6 +51,7 @@ const SalesFeatures = () => {
 
       <button 
         className="w-[255px] h-[80px] bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] text-[#313134] font-normal text-xl px-4 py-2 rounded-[34px] hover:bg-green-700 mt-20"
+        onClick={() => navigate("/accelerator-application")}
       >
         Apply Now
         </button>
