@@ -43,7 +43,12 @@ const Rewards = () => {
             <p className="text-white text-sm sm:text-lg font-normal text-left mt-2">Reach out! &gt;</p>
           </div>
           <div className="">
-            <button className="w-[164px] h-[56px] rounded-[32px] bg-white font-normal text-xs sm:text-sm p-3">Click here {" "} &gt;</button>
+            <button 
+              className="w-[164px] h-[56px] rounded-[32px] bg-white font-normal text-xs sm:text-sm p-3"
+              onClick={() => window.open('https://hirerome.com/sales', '_blank')}
+            >
+              Click here {" "} &gt;
+            </button>
           </div>
         </div>
       </div>

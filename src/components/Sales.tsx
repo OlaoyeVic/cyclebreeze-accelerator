@@ -41,7 +41,10 @@ const SalesSection = () => {
               Don’t wait to transform your business! Whether you’re a startup or an
               established company, our 10X Sales System is designed to scale with you.
             </p>
-            <button className="h-[71px] mt-4 bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] text-[#313134] font-normal text-xs px-4 py-2 rounded-[34px] hover:bg-green-700">
+            <button 
+              className="h-[71px] mt-4 bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] text-[#313134] font-normal text-xs px-4 py-2 rounded-[34px] hover:bg-green-700"
+              onClick={() => window.open('https://hirerome.com/sales', '_blank')}
+              >
               Get the 10X Sales System Now
             </button>
           </div>

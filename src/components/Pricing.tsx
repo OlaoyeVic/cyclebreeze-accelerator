@@ -44,7 +44,12 @@ const PricingSection = () => {
               <li className="h-[80px] px-6 py-6">3,000</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">3,300</li>
             </ul>
-            <button className="mt-4 bg-none text-[#676767] py-2 px-4 rounded-lg">Get Started &gt;</button>
+            <button 
+              className="mt-4 bg-none text-[#676767] py-2 px-4 rounded-lg"              
+              onClick={() => window.open('https://hirerome.com/sales', '_blank')}
+            >
+              Get Started &gt;
+            </button>
           </div>
         </div>
         {/* Growth + Scale Plans */}
@@ -68,7 +73,12 @@ const PricingSection = () => {
               <li className="h-[80px] px-6 py-6">5,000</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">6,600</li>
             </ul>
-            <button className="mt-4 bg:none text-[#676767] py-2 px-4 rounded-lg">Get Started &gt;</button>
+            <button 
+              className="mt-4 bg:none text-[#676767] py-2 px-4 rounded-lg"
+              onClick={() => window.open('https://hirerome.com/sales', '_blank')}
+            >
+              Get Started &gt;
+            </button>
           </div>
           {/* Scale Plan */}
           <div className="sm:w-[244.33px] bg-green-100 rounded-2xl text-center">
@@ -89,7 +99,12 @@ const PricingSection = () => {
               <li className="h-[80px] px-6 py-6">10,000</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">10,000</li>
             </ul>
-            <button className="mt-4 text-[#676767] py-2 px-4 rounded-lg">Get Started &gt;</button>
+            <button 
+              className="mt-4 text-[#676767] py-2 px-4 rounded-lg"
+              onClick={() => window.open('https://hirerome.com/sales', '_blank')}
+            >
+              Get Started &gt;
+            </button>
           </div>
         </div>
       </div>
