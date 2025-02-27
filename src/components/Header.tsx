@@ -15,15 +15,16 @@ const Header: React.FC = () => {
   const isActive = (route: string) => location.pathname === route;
   const externalUrls = {
     about: 'https://cyclebreeze.com/about',
-    projects: 'https://cyclebreeze.com/projects',
     services: 'https://cyclebreeze.com/services',
+    projects: 'https://cyclebreeze.com/projects',
+    products: 'https://cyclebreeze.com/products',
     academy: 'https://cyclebreeze.com/academy',
     publications: 'https://cyclebreeze.com/publications',
     programs: 'https://cyclebreeze.com/programs',
   };
 
   return (
-    <header className="py-5 px-4 sm:px-6 lg:px-8 fixed left-0 top-0 w-full z-50 bg-gradient-to-b from-transparent via-white to-transparent shadow-lg backdrop-blur-sm">
+    <header className="py-5 px-4 sm:px-6 lg:px-8 fixed left-0 top-0 w-full z-50 bg-[#F6F4EE] bg-gradient-to-b from-transparent via-[#F6F4EE] to-transparent shadow-lg backdrop-blur-sm">
       <div className="flex justify-between items-center px-4">
         {/* Logo */}
         <a href="https://www.cyclebreeze.com/" target="_blank" rel="noopener noreferrer">
@@ -50,9 +51,9 @@ const Header: React.FC = () => {
 
         <div className="flex items-center space-x-6">
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex space-x-6">
-            {(['about', 'projects', 'services', 'academy', 'publications', 'programs'] as const).map((route) => (
-              <div key={route} className={`text-sm lg:text-base ${isActive(`/${route}`) ? 'font-bold text-black' : ''}`}>
+          <div className="hidden md:flex space-x-10">
+            {(['about', 'projects', 'services', 'products', 'academy', 'publications', 'programs'] as const).map((route) => (
+              <div key={route} className={`text-sm lg:text-base ${isActive(`/${route}`) ? 'font-bold text-[#515151]' : ''}`}>
                 <a
                   href={externalUrls[route]}  // Using the external URL based on the route
                   target="_blank"

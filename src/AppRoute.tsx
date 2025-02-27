@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router";
 import AcceleratorApplication from "./AcceleratorApplication";
 import App from "./App";
+import AdminDashboard from "./components/AdminDashboard";
 function AppRoute() {
   return (
     <>
@@ -10,6 +11,7 @@ function AppRoute() {
           path="/sales/accelerator-application"
           element={<AcceleratorApplication />}
         />
+        <Route path="/sales/admin-dashboard" element={<AdminDashboard />} />
         {/* <App /> */}
         {/* <AcceleratorApplication />   */}
       </Routes>

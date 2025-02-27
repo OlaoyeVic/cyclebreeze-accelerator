@@ -1,11 +1,13 @@
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import sales1 from "../assets/sales1.svg";
 import sales2 from "../assets/sales2.svg";
 import { useNavigate } from "react-router-dom";
 
 const SalesSection = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate();  
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
@@ -27,12 +29,15 @@ const SalesSection = () => {
     <section
       id="sales-section"
       className="bg-[#EFF8EB] py-16 px-4 md:px-8 lg:px-16"
+      ref={sectionRef}
     >
       <div className="max-w-5xl mx-auto flex flex-col gap-12">
         {/* First Card */}
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={hasScrolled ? { opacity: 1, y: 0 } : {}}
+          // initial={{ opacity: 0, y: 100 }}
+          // animate={hasScrolled ? { opacity: 1, y: 0 } : {}}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
           transition={{ duration: 1.5, type: "spring" }}
           className="bg-[#548AEC]/[.40] p-6 md:p-10 rounded-2xl shadow-lg flex flex-col md:flex-row md:justify-between items-center gap-6"
           viewport={{ once: true }}
