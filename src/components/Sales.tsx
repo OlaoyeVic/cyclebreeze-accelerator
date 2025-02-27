@@ -24,7 +24,10 @@ const SalesSection = () => {
   }, []);
 
   return (
-    <section id="sales-section" className="bg-[#EFF8EB] py-16 px-4 md:px-8 lg:px-16">
+    <section
+      id="sales-section"
+      className="bg-[#EFF8EB] py-16 px-4 md:px-8 lg:px-16"
+    >
       <div className="max-w-5xl mx-auto flex flex-col gap-12">
         {/* First Card */}
         <motion.div
@@ -35,16 +38,23 @@ const SalesSection = () => {
           viewport={{ once: true }}
         >
           <div className="md:w-1/2">
-            <p className="text-xs font-normal text-[#F1AD71] font-semibold">SALES & LEADS</p>
-            <h2 className="text-[40px] font-normal text-gray-900 mt-2">Ready to 10X Your Sales?</h2>
-            <p className="text-[#676767] mt-2">
-              Don’t wait to transform your business! Whether you’re a startup or an
-              established company, our 10X Sales System is designed to scale with you.
+            <p className="text-xs font-normal text-[#F1AD71] font-semibold">
+              SALES & LEADS
             </p>
-            <button 
+            <h2 className="text-[40px] font-normal text-gray-900 mt-2">
+              Ready to 10X Your Sales?
+            </h2>
+            <p className="text-[#676767] mt-2">
+              Don’t wait to transform your business! Whether you’re a startup or
+              an established company, our 10X Sales System is designed to scale
+              with you.
+            </p>
+            <button
               className="h-[71px] mt-4 bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] text-[#313134] font-normal text-xs px-4 py-2 rounded-[34px] hover:bg-green-700"
-              onClick={() => window.open('https://hirerome.com/sales', '_blank')}
-              >
+              onClick={() =>
+                window.open("https://hirerome.com/sales", "_blank")
+              }
+            >
               Get the 10X Sales System Now
             </button>
           </div>
@@ -65,15 +75,19 @@ const SalesSection = () => {
           className="bg-[#F5F5FF] p-6 md:p-10 rounded-2xl shadow-lg flex flex-col md:flex-row md:justify-between items-center gap-6"
         >
           <div className="md:w-1/2">
-            <p className="text-xs font-normal text-[#F1AD71] font-semibold">SALES & LEADS</p>
-            <h2 className="text-[40px] font-normal text-gray-900 mt-2">10X Sales Accelerator Program</h2>
-            <p className="text-[#676767] mt-2 font-normal text-lg">
-              Apply for our exclusive 10X Sales Accelerator Program and stand a chance to
-              win a complete sales system setup for your business.
+            <p className="text-xs font-normal text-[#F1AD71] font-semibold">
+              SALES & LEADS
             </p>
-            <button 
+            <h2 className="text-[40px] font-normal text-gray-900 mt-2">
+              10X Sales Accelerator Program
+            </h2>
+            <p className="text-[#676767] mt-2 font-normal text-lg">
+              Apply for our exclusive 10X Sales Accelerator Program and stand a
+              chance to win a complete sales system setup for your business.
+            </p>
+            <button
               className="h-[71px] mt-4 bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] text-[#313134] font-normal text-xs px-4 py-2 rounded-[34px] hover:bg-green-700"
-              onClick={() => navigate("/accelerator-application")}
+              onClick={() => navigate("/sales/accelerator-application")}
             >
               Apply for the Accelerator Program
             </button>

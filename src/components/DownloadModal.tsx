@@ -75,22 +75,7 @@ const DownloadModal = ({ closeModal }: DownloadModalProps) => {
               required
             />
           </div>
-          <div className="w-full">
-            <label
-              htmlFor="message"
-              className="block text-left text-gray-700 font-medium mb-2"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              maxLength={200}
-              className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
+
           <div className="w-full">
             <button
               type="submit"
