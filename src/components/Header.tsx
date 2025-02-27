@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BiX } from "react-icons/bi";
 import blackLogo from "../assets/black-logo.svg";
@@ -13,14 +13,22 @@ const Header: React.FC = () => {
   };
 
   const isActive = (route: string) => location.pathname === route;
+  const externalUrls = {
+    about: 'https://cyclebreeze.com/about',
+    projects: 'https://cyclebreeze.com/projects',
+    services: 'https://cyclebreeze.com/services',
+    academy: 'https://cyclebreeze.com/academy',
+    publications: 'https://cyclebreeze.com/publications',
+    programs: 'https://cyclebreeze.com/programs',
+  };
 
   return (
     <header className="py-5 px-4 sm:px-6 lg:px-8 fixed left-0 top-0 w-full z-50 bg-gradient-to-b from-transparent via-white to-transparent shadow-lg backdrop-blur-sm">
       <div className="flex justify-between items-center px-4">
         {/* Logo */}
-        <Link to="/">
+        <a href="https://www.cyclebreeze.com/" target="_blank" rel="noopener noreferrer">
         <img src={blackLogo} alt="CycleBreeze" className="h-8" />
-        </Link>
+        </a>
 
         {/* Desktop Navigation Links
         <div className="hidden md:flex space-x-6">
@@ -43,9 +51,16 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-6">
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-6">
-            {['about', 'projects', 'services', 'academy', 'publications', 'programs'].map((route) => (
+            {(['about', 'projects', 'services', 'academy', 'publications', 'programs'] as const).map((route) => (
               <div key={route} className={`text-sm lg:text-base ${isActive(`/${route}`) ? 'font-bold text-black' : ''}`}>
-                <Link to={`/${route}`}>{route.charAt(0).toUpperCase() + route.slice(1)}</Link>
+                <a
+                  href={externalUrls[route]}  // Using the external URL based on the route
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-700"
+                  >
+                    {route.charAt(0).toUpperCase() + route.slice(1)}
+                  </a>
               </div>
             ))}
           </div>
@@ -82,76 +97,249 @@ const Header: React.FC = () => {
               <div className="space-y-2 text-gray-700">
                 {route === 'about us' && (
                   <div className="flex flex-col">
-                    <Link to="/about#whatWeDo">What we do</Link>
-                    <Link to="/about#mission">Mission</Link>
-                    <Link to="/about#partners">Partners</Link>
-                    <Link to="/about#cyclebreezeHub">Cyclebreeze hub</Link>
+                    <a 
+                      href="https://www.cyclebreeze.com/about#whatWeDo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      What we do
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/about#mission"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Mission
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/about#partners"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Partners
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/about#cyclebreezeHub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cyclebreeze hub
+                    </a>
                   </div>
                 )}
                 {route === 'services' && (
                   <div className="flex flex-col">
-                    <Link to="/services/product-dev">Product Development</Link>
-                    <Link to="/services/branding">Branding</Link>
-                    <Link to="/services/business-dev">Business Development</Link>
-                    <Link to="/services/web-app-dev">Web/App Development</Link>
-                    <Link to="/services/web-app-dev">Web/App Development</Link>
-                    <Link to="/services/web-app-dev">Digital Media Creation</Link>
+                    <a 
+                      href="https://www.cyclebreeze.com/services/product-development"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Product Development
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/services/branding"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Branding
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/services/branding"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Business Development
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/services/business-development"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Web/App Development
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/services/web-app-development"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Web/App Development
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/services/marketing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Marketing
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/services/digital-media-creation"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Digital Media Creation
+                    </a>
                     
                   </div>
                 )}
                 {route === 'products' && (
                   <div className="flex flex-col">
-                    <Link to="/projects/circue">Data Class.ng</Link>
-                    <Link to="/projects/hwb">CycleBreeze E-library</Link>
-                    <Link to="/projects/ni-he">ROME</Link>
-                    <Link to="/projects/ni-he">Powerbank</Link>
+                    <a 
+                      href="https://dataclass.cyclebreeze.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Data Class.ng
+                    </a>
+                    <a 
+                      href=""
+                      // target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      CycleBreeze E-library
+                    </a>
+                    <a 
+                      href="https://hirerome.com/sales"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ROME
+                    </a>
+                    <a 
+                      href=""
+                      // target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Powerbank
+                    </a>
                   </div>
                 )}
                 {route === 'projects' && (
                   <div className="flex flex-col">
-                    <Link to="/projects/circue">Circue</Link>
-                    <Link to="/projects/hwb">Healthworkers Bio</Link>
-                    <Link to="/projects/ni-he">NI-HE</Link>
-                  </div>
-                )}
-                {route === 'projects' && (
-                  <div className="flex flex-col">
-                    <Link to="/services/product-dev">Circue</Link>
-                    <Link to="/services/branding">Healthworkers Bio</Link>
-                    <Link to="/services/business-dev">NIHE</Link>
-                    <Link to="/services/web-app-dev">Tempolasafun</Link>
-                    <Link to="/services/web-app-dev">Thecreatorsinnercircle</Link>
-                    <Link to="/services/web-app-dev">Pretty Dunia</Link>
-                    
+                    <a 
+                      href="https://www.cyclebreeze.com/projects/circue"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Circue
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/projects/health-workers-bio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Healthworkers Bio
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/projects/ni-he"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      NI-HE
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/projects/temploifamosun"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Tempolasafun
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/projects/thecreatorsinnercircle"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Thecreahrefrsinnercircle
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/projects/prettydunia"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Pretty Dunia
+                    </a>
                   </div>
                 )}
                 {route === 'academy' && (
                   <div className="flex flex-col">
-                    <Link to="/services/product-dev">AI Mastery Courses for Professionals</Link>
-                    <Link to="/services/branding">Certificate Courses</Link>
+                    <a
+                      href="https://www.cyclebreeze.com/ai-mastery-courses"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      AI Mastery Courses for Professionals
+                    </a>
+                    <a 
+                      href="https://academy.cyclebreeze.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Certificate Courses
+                    </a>
                   </div>
                 )}
                 {route === 'careers' && (
                   <div className="flex flex-col">
-                    <Link to="/services/product-dev">Jobs/Internships</Link>
+                    <a 
+                      href=""
+                      // target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Jobs/Internships
+                    </a>
                   </div>
                 )}
                 {route === 'publications' && (
                   <div className="flex flex-col">
-                    <Link to="/services/product-dev">Technical Papers</Link>
-                    <Link to="/services/branding">Technical Reports</Link>
+                    <a 
+                      href="https://www.cyclebreeze.com/technical-papers"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Technical Papers
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/technical-reports"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Technical Reports
+                    </a>
                   </div>
                 )}
                 {route === 'programs/Events' && (
                   <div className="flex flex-col">
-                    <Link to="/services/product-dev">Incubation</Link>
-                    <Link to="/services/branding">Lautech Training</Link>
+                    <a 
+                      href="https://www.cyclebreeze.com/incubation"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Incubation
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/programs/data-analytics-training"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Lautech Training
+                    </a>
                   </div>
                 )}
                 {route === 'contact us' && (
                   <div className="flex flex-col">
-                    <Link to="/services/product-dev">Locate us</Link>
-                    <Link to="/services/branding">Reach out</Link>
+                    <a 
+                      href="https://www.cyclebreeze.com/contact-us"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Locate us
+                    </a>
+                    <a 
+                      href="https://www.cyclebreeze.com/chat-with-us"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Reach out
+                    </a>
                   </div>
                 )}
               </div>
