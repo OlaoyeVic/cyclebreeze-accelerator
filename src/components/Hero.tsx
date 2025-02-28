@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import hero from "../assets/hero.svg";
+import hero from "../assets/2366475c0b44d9a806005344b7233978.png";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -37,11 +37,11 @@ const Hero = () => {
         </div>
 
         {/* Image */}
-        <div className="mt-6 hidden md:block">
+        <div className="mt-6 hidden lg:block">
           <img
             src={hero}
             alt="Sales Growth"
-            className="w-[763.56px] h-[573px] max-w-md mx-auto"
+            className="w-[963.56px] h-[573px]  mx-auto"
           />
         </div>
       </div>

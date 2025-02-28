@@ -12,13 +12,21 @@ const PricingSection = () => {
             </div>
             {/* Feature Items */}
             <ul className="space-y-4 mt-4">
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">Sales system tools setup</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                Sales system tools setup
+              </li>
               <li className="h-[80px] px-6 py-6">Number of Student(s)</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">Training</li>
-              <li className="h-[80px] px-6 py-6">First Month Tools Subscription</li>
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">Subsequent Monthly Tools Subscription</li>
+              <li className="h-[80px] px-6 py-6">
+                First Month Tools Subscription
+              </li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                Subsequent Monthly Tools Subscription
+              </li>
               <li className="h-[80px] px-6 py-6">Consultation</li>
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">Recruit, Onboard & Train Sales Talent</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                Recruit, Onboard & Train Sales Talent
+              </li>
               <li className="h-[80px] px-6 py-6">Call agent</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">Phone Number</li>
               <li className="h-[80px] px-6 py-6">Monthly Email</li>
@@ -34,9 +42,13 @@ const PricingSection = () => {
             <ul className="mt-4 space-y-4 text-sm">
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">One-off</li>
               <li className="h-[80px] px-6 py-6">1</li>
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">3 days - 10 hours</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                3 days - 10 hours
+              </li>
               <li className="h-[80px] px-6 py-6">Basic - N35,000 + $49</li>
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">Basic - N32,000</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                Basic - N32,000
+              </li>
               <li className="h-[80px] px-6 py-6">30 min</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">-</li>
               <li className="h-[80px] px-6 py-6">Up to 5</li>
@@ -44,9 +56,11 @@ const PricingSection = () => {
               <li className="h-[80px] px-6 py-6">3,000</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">3,300</li>
             </ul>
-            <button 
-              className="mt-4 bg-none text-[#676767] py-2 px-4 rounded-lg"              
-              onClick={() => window.open('https://hirerome.com/sales', '_blank')}
+            <button
+              className="mt-4 bg-none text-[#676767] py-2 px-4 rounded-lg"
+              onClick={() =>
+                window.open("https://hirerome.com/sales", "_blank")
+              }
             >
               Get Started &gt;
             </button>
@@ -61,21 +75,31 @@ const PricingSection = () => {
               <p className="font-bold text-xl">(N900,000)</p>
             </div>
             <ul className="mt-4 space-y-4 text-sm">
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">One-off + one month maintenance</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                One-off + one month maintenance
+              </li>
               <li className="h-[80px] px-6 py-6">2</li>
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">4 days - 12 hours</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                4 days - 12 hours
+              </li>
               <li className="h-[80px] px-6 py-6">Growth - N35,000 + $49</li>
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">Basic - N40,000 + $25</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                Basic - N40,000 + $25
+              </li>
               <li className="h-[80px] px-6 py-6">1 hour</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">1 staff</li>
               <li className="h-[80px] px-6 py-6">Up to 7</li>
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">1 Nigeria + 1 US Number available</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                1 Nigeria + 1 US Number available
+              </li>
               <li className="h-[80px] px-6 py-6">5,000</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">6,600</li>
             </ul>
-            <button 
+            <button
               className="mt-4 bg:none text-[#676767] py-2 px-4 rounded-lg"
-              onClick={() => window.open('https://hirerome.com/sales', '_blank')}
+              onClick={() =>
+                window.open("https://hirerome.com/sales", "_blank")
+              }
             >
               Get Started &gt;
             </button>
@@ -87,21 +111,31 @@ const PricingSection = () => {
               <p className="font-bold text-xl">(N1,500,000)</p>
             </div>
             <ul className="mt-4 space-y-4 text-sm">
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">One-off + two-month maintenance</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                One-off + two-month maintenance
+              </li>
               <li className="h-[80px] px-6 py-6">4</li>
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">5 days - 15 hours</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                5 days - 15 hours
+              </li>
               <li className="h-[80px] px-6 py-6">Premium - N35,000 + $74</li>
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">Basic - N45,000 + $49</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                Basic - N45,000 + $49
+              </li>
               <li className="h-[80px] px-6 py-6">2 hours</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">3 staff</li>
               <li className="h-[80px] px-6 py-6">Up to 8</li>
-              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">1 Nigeria + extra US and Nigeria numbers available</li>
+              <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">
+                1 Nigeria + extra US and Nigeria numbers available
+              </li>
               <li className="h-[80px] px-6 py-6">10,000</li>
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">10,000</li>
             </ul>
-            <button 
+            <button
               className="mt-4 text-[#676767] py-2 px-4 rounded-lg"
-              onClick={() => window.open('https://hirerome.com/sales', '_blank')}
+              onClick={() =>
+                window.open("https://hirerome.com/sales", "_blank")
+              }
             >
               Get Started &gt;
             </button>
