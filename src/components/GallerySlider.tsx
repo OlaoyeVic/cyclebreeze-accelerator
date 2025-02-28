@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import pexel1 from '../assets/pexel1.svg';
-import pexel2 from '../assets/pexel2.svg';
-import pexel3 from '../assets/pexel3.svg';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import pexel1 from "../assets/pexel1.svg";
+import pexel2 from "../assets/pexel2.svg";
+import pexel3 from "../assets/pexel3.svg";
 
 interface ImageSlide {
   src: string;
@@ -11,9 +11,9 @@ interface ImageSlide {
 }
 
 const imageSlides: ImageSlide[] = [
-  { src: pexel1, alt: 'Image 1', caption: 'Beautiful Landscape' },
-  { src: pexel2, alt: 'Image 2', caption: 'Modern Architecture' },
-  { src: pexel3, alt: 'Image 3', caption: 'Vibrant City' },
+  { src: pexel1, alt: "Image 1", caption: "Beautiful Landscape" },
+  { src: pexel2, alt: "Image 2", caption: "Modern Architecture" },
+  { src: pexel3, alt: "Image 3", caption: "Vibrant City" },
   // Add more images here
 ];
 
@@ -50,7 +50,7 @@ const ImageSlider: React.FC = () => {
   };
 
   return (
-    <section className="relative h-[989px] w-full overflow-hidden">
+    <section className="relative h-[489px] w-full overflow-hidden">
       <AnimatePresence initial={false} custom={currentIndex}>
         <motion.div
           key={currentIndex}

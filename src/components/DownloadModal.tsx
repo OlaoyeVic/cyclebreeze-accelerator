@@ -140,6 +140,10 @@ const DownloadModal = ({ closeModal }: DownloadModalProps) => {
 
       alert("Submission successful!");
       setFormData({ name: "", surname: "", email: "" });
+      window.open(
+        "https://drive.google.com/file/d/1KWF9oZFq1Ks9gD-x-fM5rcnXY2KLqeMD/view?usp=sharing",
+        "_blank"
+      );
       closeModal();
     } catch (error) {
       console.error("Error submitting form: ", error);
@@ -159,10 +163,38 @@ const DownloadModal = ({ closeModal }: DownloadModalProps) => {
           ✖
         </button>
         <form className="flex flex-col gap-4 mt-8" onSubmit={handleSubmit}>
-          <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required className="border p-2 rounded" />
-          <input type="text" name="surname" placeholder="Surname" value={formData.surname} onChange={handleChange} required className="border p-2 rounded" />
-          <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required className="border p-2 rounded" />
-          <button type="submit" className="bg-green-500 text-white py-2 rounded" disabled={loading}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="border p-2 rounded"
+          />
+          <input
+            type="text"
+            name="surname"
+            placeholder="Surname"
+            value={formData.surname}
+            onChange={handleChange}
+            required
+            className="border p-2 rounded"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="border p-2 rounded"
+          />
+          <button
+            type="submit"
+            className="bg-green-500 text-white py-2 rounded"
+            disabled={loading}
+          >
             {loading ? "Submitting..." : "Submit"}
           </button>
         </form>

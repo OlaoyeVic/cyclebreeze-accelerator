@@ -37,7 +37,7 @@ const Hero = () => {
         </div>
 
         {/* Image */}
-        <div className="mt-6">
+        <div className="mt-6 hidden md:block">
           <img
             src={hero}
             alt="Sales Growth"
