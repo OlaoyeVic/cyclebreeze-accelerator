@@ -45,7 +45,7 @@ const PricingSection = () => {
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">3,300</li>
             </ul>
             <button 
-              className="mt-4 bg-none font-bold text-lg leading-[32px] text-[#676767] py-2 px-4 rounded-lg"              
+              className="my-4 bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] p-2 font-bold text-lg leading-[32px] text-[#676767] py-2 px-4 rounded-[32px]"            
               onClick={() => window.open('https://hirerome.com/sales', '_blank')}
             >
               Get Started &gt;
@@ -74,7 +74,7 @@ const PricingSection = () => {
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">6,600</li>
             </ul>
             <button 
-              className="mt-4 bg:none font-bold text-lg leading-[32px] text-[#676767] py-2 px-4 rounded-lg"
+              className="my-4 bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] p-2 font-bold text-lg leading-[32px] text-[#676767] py-2 px-4 rounded-[32px]"
               onClick={() => window.open('https://hirerome.com/sales', '_blank')}
             >
               Get Started &gt;
@@ -100,7 +100,7 @@ const PricingSection = () => {
               <li className="h-[80px] bg-[#F8F8F8] px-6 py-6">10,000</li>
             </ul>
             <button 
-              className="mt-4 font-bold text-lg leading-[32px] text-[#676767] py-2 px-4 rounded-lg"
+              className="my-4 bg-gradient-to-r from-[#6FC446] via-transparent to-[#C3E6B2] p-2 font-bold text-lg leading-[32px] text-[#676767] py-2 px-4 rounded-[32px]"
               onClick={() => window.open('https://hirerome.com/sales', '_blank')}
             >
               Get Started &gt;
